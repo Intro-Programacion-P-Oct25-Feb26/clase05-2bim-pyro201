@@ -9,7 +9,7 @@ import paquete02.DatoPersonal;
 import paquete03.DatosUbicacion;
 import paquete04.DatoAcademico;
 import paquete05.DatoFinal;
-
+import paquete06.Informe;
 /**
  *
  * @author reroes
@@ -29,17 +29,14 @@ public class Principal {
         ciudad = DatosUbicacion.obtenerCiudad();
         misNotas = DatoAcademico.obtenerNotas(4);
         promedio = DatoFinal.obtenerPromedio(misNotas);
+        Informe.imprimir(nombre,apellidoRetornado,ciudad,promedio,misNotas);
         
         
-        System.out.printf("Los datos ingresados son:\n"
-                + "Nombre: %s\n"
-                + "Apellido: %s\n"
-                + "Ciudad: %s\n"
-                + "Promedio: %.2f\n",
-                nombre,
-                apellidoRetornado,
-                ciudad,
-                promedio);
     }
     
 }
+/*
+la problematica nos pide que solicitemos al usuario los siguientes datos: nombre
+apellido,ciudad,notas.con las notas dadas por el usuario nos saca un promedio y 
+luego presenta todos los datos en un solo reporte
+*/
